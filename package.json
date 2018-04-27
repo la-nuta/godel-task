@@ -1,0 +1,11 @@
+{
+  "name": "Keyboard",
+  "version": "0.0.1",
+  "dependencies": {
+    "gulp-less": "^4.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "less": "^3.0.2"
+  }
+}
