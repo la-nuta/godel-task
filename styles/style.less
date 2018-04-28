@@ -1,242 +1,264 @@
+@font-face {
+  font-family: 'Aganè';
+  src: url('../fonts/agane/Aganè 45 (light).ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .keyboard-wrapper {
   background-color: #000000;
   color: #ffffff;
   display: grid;
-  height: 290px;
-  padding: 10px;
-  grid-template-areas:
-          "key001 key002 key002 key003 key003 key004 key004  key005 key005 key006 key006 key007 key007 key008 key008 key009 key009  key010 key010 key011 key011 key012 key012 key013 key013 key014 key014  key015 key015 key016 key016"
-"key117 key117 key118 key118 key119 key119 key120  key120 key121 key121 key122 key122 key123 key123 key124 key124 key125 key125  key126 key126 key127 key127 key128 key128 key129 key129 key130 key130 key130 key131 key132"
-  "key233 key233 key233 key234 key234   key235 key235  key236 key236 key237   key237 key238 key238 key239 key239   key240 key240  key241 key241 key242   key242 key243 key243 key244 key244   key245 key245 b b   key246 key246 "
-          "key347 key347 key348 key348 key349   key349 key350 key350 key351  key351   key352 key352 key353 key353 key354   key354 key355 key355 key356  key356   key357 key357 key358 key358 key359 key359 key359 key359 key359 key360 key360"
-  "key461 key461 key462 key462 key463   key463 key464 key464 key464 key464   key464 key464 key464 key464 key464   key464 key464 key464 key465 key465    key466 key467 key467 key468 key468   key469 key469 key470 key470 key471 key471"
-;
-
-  grid-template-rows: 50px 50px 50px 50px 50px;
-  grid-template-columns: 50px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px 35px 35px;
-  grid-gap: 5px;
+  grid-template-rows: repeat(31, 10px);
+  grid-template-columns: repeat(99, 2fr);
   text-align: center;
-line-height: 50px;
-  .key{
+  line-height: 50px;
+  margin: auto;
+
+  .key {
     background-color: #3b3b3b;
-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-family: 'Aganè', Verdana, sans-serif;
+    font-weight: 300;
+    &.row1{
+      grid-row-start: 2;
+      grid-row-end: 7;
+    }
+    &.row2{
+      grid-row-start: 8;
+      grid-row-end: 13;
+    }
+    &.row3{
+      grid-row-start: 14;
+      grid-row-end: 19;
+    }
+    &.row4{
+      grid-row-start: 20;
+      grid-row-end: 25;
+    }
+    &.row5{
+      grid-row-start: 26;
+      grid-row-end: 31;
+    }
+    &.current {
+      color: #06adff;
+    }
   }
   .key1 {
-    grid-area: key001;
+    grid-column-start: 2;
+    grid-column-end: 7;
   }
   .key2 {
-    grid-area: key002;
+    grid-column-start: 8;
+    grid-column-end: 13;
   }
-  .key3 {
-    grid-area: key003;
-  }
-  .key4 {
-    grid-area: key004;
-  }
-  .key5 {
-    grid-area: key005;
-  }
-  .key6 {
-    grid-area: key006;
-  }
-  .key7 {
-    grid-area: key007;
-  }
-  .key8 {
-    grid-area: key008;
-  }
-  .key9 {
-    grid-area: key009;
-  }
-  .key10 {
-    grid-area: key010;
-  }
-  .key11 {
-    grid-area: key011;
-  }
-  .key12 {
-    grid-area: key012;
-  }
-  .key13 {
-    grid-area: key013;
-  }
-  .key14 {
-    grid-area: key014;
-  }
-  .key15 {
-    grid-area: key015;
-  }
-  .key16 {
-    grid-area: key016;
+  .key3, .key34 {
+    grid-column-start: 14;
+    grid-column-end: 19;
   }
 
-  .key17 {
-    grid-area: key117;
+  .key4, .key35 {
+    grid-column-start: 20;
+    grid-column-end: 25;
   }
-  .key18 {
-    grid-area: key118;
+  .key5, .key36 {
+    grid-column-start: 26;
+    grid-column-end: 31;
   }
-  .key19 {
-    grid-area: key119;
+  .key6, .key37 {
+    grid-column-start: 32;
+    grid-column-end: 37;
   }
-  .key20 {
-    grid-area: key120;
+  .key7, .key38 {
+    grid-column-start: 38;
+    grid-column-end: 43;
   }
-  .key21 {
-    grid-area: key121;
+  .key8, .key39 {
+    grid-column-start: 44;
+    grid-column-end: 49;
   }
-  .key22 {
-    grid-area: key122;
+  .key9, .key40 {
+    grid-column-start: 50;
+    grid-column-end: 55;
   }
-  .key23 {
-    grid-area: key123;
+  .key10, .key41 {
+    grid-column-start: 56;
+    grid-column-end: 61;
   }
-  .key24 {
-    grid-area: key124;
+  .key11, .key42 {
+    grid-column-start: 62;
+    grid-column-end: 67;
   }
-  .key25 {
-    grid-area: key125;
+  .key12, .key43 {
+    grid-column-start: 68;
+    grid-column-end: 73;
   }
-  .key26 {
-    grid-area: key126;
+  .key13, .key44 {
+    grid-column-start: 74;
+    grid-column-end: 79;
   }
-  .key27 {
-    grid-area: key127;
+
+  .key14, .key45 {
+    grid-column-start: 80;
+    grid-column-end: 85;
   }
-  .key28 {
-    grid-area: key128;
+  .key15, .key30-2 {
+    grid-column-start: 86;
+    grid-column-end: 91;
+  }
+
+  .key16, .key46 {
+    grid-column-start: 92;
+    grid-column-end: 99;
+  }
+
+
+  .key17, .key47 {
+    grid-column-start: 2;
+    grid-column-end: 11;
+  }
+  .key18, .key48 {
+    grid-column-start: 12;
+    grid-column-end: 17;
+  }
+  .key19, .key49 {
+    grid-column-start: 18;
+    grid-column-end: 23;
+  }
+  .key20, .key50 {
+    grid-column-start: 24;
+    grid-column-end: 29;
+  }
+  .key21, .key51 {
+    grid-column-start: 30;
+    grid-column-end: 35;
+  }
+  .key22, .key52 {
+    grid-column-start: 36;
+    grid-column-end: 41;
+  }
+  .key23, .key53 {
+    grid-column-start: 42;
+    grid-column-end: 47;
+  }
+  .key24, .key54 {
+    grid-column-start: 48;
+    grid-column-end: 53;
+  }
+  .key25, .key55 {
+    grid-column-start: 54;
+    grid-column-end: 59;
+  }
+  .key26, .key56 {
+    grid-column-start: 60;
+    grid-column-end: 65;
+  }
+  .key27, .key57 {
+    grid-column-start: 66;
+    grid-column-end: 71;
+  }
+  .key28, .key58 {
+    grid-column-start: 72;
+    grid-column-end: 77;
   }
   .key29 {
-    grid-area: key129;
+    grid-column-start: 78;
+    grid-column-end: 83;
   }
   .key30 {
-    grid-area: key130;
+    grid-column-start: 84;
+    grid-column-end: 87;
   }
+
+  .key30-1 {
+    grid-column-start: 86;
+    grid-column-end: 91;
+    height: 110px;
+    line-height: 110px;
+  }
+
   .key31 {
-    grid-area: key131;
+    grid-column-start: 92;
+    grid-column-end: 95;
+    perspective: 500px;
   }
   .key32 {
-    grid-area: key132;
+    grid-column-start: 96;
+    grid-column-end: 99;
   }
 
 
-  .key33 {
-    grid-area: key233;
-  }
-  .key34 {
-    grid-area: key234;
-  }
-  .key35 {
-    grid-area: key235;
-  }
-  .key36 {
-    grid-area: key236;
-  }
-  .key37 {
-    grid-area: key237;
-  }
-  .key38 {
-    grid-area: key238;
-  }
-  .key39 {
-    grid-area: key239;
-  }
-  .key40 {
-    grid-area: key240;
-  }
-  .key41 {
-    grid-area: key241;
-  }
-  .key42 {
-    grid-area: key242;
-  }
-  .key43 {
-    grid-area: key243;
-  }
-  .key44 {
-    grid-area: key244;
-  }
-  .key45 {
-    grid-area: key245;
-  }
-  .key46 {
-    grid-area: key246;
+  .key33, .key61 {
+    grid-column-start: 2;
+    grid-column-end: 13;
+    text-align: start;
+    text-indent: 10px;
   }
 
-
-  .key47 {
-    grid-area: key347;
-  }
-  .key48 {
-    grid-area: key348;
-  }
-  .key49 {
-    grid-area: key349;
-  }
-  .key50 {
-    grid-area: key350;
-  }
-  .key51 {
-    grid-area: key351;
-  }
-  .key52 {
-    grid-area: key352;
-  }
-  .key53 {
-    grid-area: key353;
-  }
-  .key54 {
-    grid-area: key354;
-  }
-  .key55 {
-    grid-area: key355;
-  }
-  .key56 {
-    grid-area: key356;
-  }
-  .key57 {
-    grid-area: key357;
-  }
-  .key58 {
-    grid-area: key358;
-  }
   .key59 {
-    grid-area: key359;
+    grid-column-start: 78;
+    grid-column-end: 91;
   }
-  .key60 {
-    grid-area: key360;
+  .key60, .key70{
+    grid-column-start: 92;
+    grid-column-end: 99;
   }
 
-  .key61 {
-    grid-area: key461;
-  }
+
   .key62 {
-    grid-area: key462;
+    grid-column-start: 14;
+    grid-column-end: 20;
   }
   .key63 {
-    grid-area: key463;
+    grid-column-start: 21;
+    grid-column-end: 27;
   }
   .key64 {
-    grid-area: key464;
+    grid-column-start: 28;
+    grid-column-end: 60;
   }
+
   .key65 {
-    grid-area: key465;
+    grid-column-start: 61;
+    grid-column-end: 67;
   }
   .key66 {
-    grid-area: key466;
+    grid-column-start: 68;
+    grid-column-end: 73;
   }
   .key67 {
-    grid-area: key467;
+    grid-column-start: 74;
+    grid-column-end: 79;
   }
-  .key68 {
-    grid-area: key468;
+  .key68{
+    grid-column-start: 80;
+    grid-column-end: 85;
   }
   .key69 {
-    grid-area: key469;
-  }.key70 {
-    grid-area: key470;
+    grid-column-start: 86;
+    grid-column-end: 91;
   }
-  .key71 {
-    grid-area: key471;
+
+
+  .key17, .key47, .key59 {
+    text-align: start;
+    text-indent: 10px;
+  }
+
+  .key15{
+    font-size: 1em;
+  }
+}
+
+.keyboard-form{
+  margin: 50px auto;
+  text-align: center;
+
+  .keyboard-input{
+    width: 30%;
+    height: 50px;
+    border: 1px solid #000000;
+    margin-left: 10px;
   }
 }
